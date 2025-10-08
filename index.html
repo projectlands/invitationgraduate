@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="https://stie-satyadharma.ac.id/wp-content/uploads/2019/02/LOGO-e1549541735611.png" type="image/png">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://stie-satyadharma.ac.id/wp-content/uploads/2019/02/LOGO-e1549541735611.png" type="image/png">
+
+    <head>
         <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
         <meta property="og:title" content="Undangan Wisuda XXVI STIE Satya Dharma">
         <meta property="og:description" content="Wisuda XXVI">
-        <meta property="og:image" content="thumbnail.png">
+        <meta property="og:image" content="https://invitation.stie-satyadharma.ac.id/thumbnail.png">
         <meta property="og:url" content="https://invitation.stie-satyadharma.ac.id/">
         <meta property="og:type" content="website">
 
@@ -16,299 +18,368 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Undangan Wisuda XXVI STIE Satya Dharma">
         <meta name="twitter:description" content="Wisuda XXVI">
-        <meta name="twitter:image" content="thumbnail.png">
-    
+        <meta name="twitter:image" content="https://invitation.stie-satyadharma.ac.id/thumbnail.png">
+    </head>
 
-  <title>Undangan Wisuda XXVI STIE Satya Dharma</title>
+    <title>Undangan Wisuda XXVI STIE Satya Dharma</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      background: url('https://imagine-public.x.ai/imagine-public/images/c32ee9f3-e5de-4b06-a1d3-58b122a9ec96.png?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-      font-family: "Times New Roman", serif;
-      color: #2b2b2b;
-      height: 100vh;
-      overflow: hidden;
-    }
+        body {
+            background: url('https://imagine-public.x.ai/imagine-public/images/c32ee9f3-e5de-4b06-a1d3-58b122a9ec96.png?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            font-family: "Times New Roman", serif;
+            color: #2b2b2b;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-    .book {
-      width: 90%;
-      max-width: 500px;
-      height: 80vh;
-      margin: 40px auto;
-      position: relative;
-      perspective: 2000px;
-    }
+        .book {
+            width: 90%;
+            max-width: 500px;
+            height: 80vh;
+            margin: 40px auto;
+            position: relative;
+            perspective: 2000px;
+        }
 
-    .page {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-      border-radius: 15px;
-      backface-visibility: hidden;
-      transform-origin: left;
-      transition: transform 1s ease-in-out;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+        .page {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            backface-visibility: hidden;
+            transform-origin: left;
+            transition: transform 1s ease-in-out;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
-    .page h2 {
-      font-size: 1.5em;
-      margin-bottom: 15px;
-      color: #222;
-      font-weight: bold;
-    }
+        .page h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #222;
+            font-weight: bold;
+        }
 
-    .page p {
-      font-size: 1em;
-      line-height: 1.6;
-      color: #333;
-    }
+        .page p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #333;
+        }
 
-    /* ==== STYLE SUSUNAN ACARA ==== */
-    .susunan {
-      width: 100%;
-      text-align: left;
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(6px);
-      border-radius: 12px;
-      padding: 20px 25px;
-      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-      max-height: 65vh;
-      overflow-y: auto;
-    }
+        /* ==== STYLE SUSUNAN ACARA ==== */
+        .susunan {
+            width: 100%;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(6px);
+            border-radius: 12px;
+            padding: 20px 25px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+            max-height: 65vh;
+            overflow-y: auto;
+        }
 
-    .susunan h2 {
-      text-align: center;
-      color: #1a1a1a;
-      font-size: 1.4em;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-      padding-bottom: 5px;
-    }
+        .susunan h2 {
+            text-align: center;
+            color: #1a1a1a;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+            padding-bottom: 5px;
+        }
 
-    .susunan ol {
-      padding-left: 20px;
-      line-height: 1.8;
-      color: #222;
-    }
+        .susunan ol {
+            padding-left: 20px;
+            line-height: 1.8;
+            color: #222;
+        }
 
-    .susunan ol li {
-      margin-bottom: 8px;
-    }
+        .susunan ol li {
+            margin-bottom: 8px;
+        }
 
-    .susunan ol[type="a"] {
-      margin-top: 5px;
-      margin-bottom: 10px;
-      padding-left: 25px;
-      font-style: italic;
-    }
+        .susunan ol[type="a"] {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            font-style: italic;
+        }
 
-    .controls {
-      position: fixed;
-      bottom: 25px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 20px;
-    }
+        .controls {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
 
-    .controls button {
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 50%;
-      font-size: 18px;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      transition: all 0.3s;
-    }
+        .controls button {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
 
-    .controls button:hover {
-      background: rgba(0, 0, 0, 0.8);
-      transform: scale(1.1);
-    }
+        .controls button:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
 
-    @media (max-width: 600px) {
-      .book {
-        height: 75vh;
-      }
-      .page {
-        padding: 20px;
-      }
-      .page h2 {
-        font-size: 1.3em;
-      }
-      .page p {
-        font-size: 0.95em;
-      }
-    }
-  </style>
+        /* ==== INDIKATOR SWIPE SEDERHANA ==== */
+.swipe-indicator-simple {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.swipe-arrows span {
+  display: inline-block;
+  animation: moveArrows 1.2s infinite;
+}
+
+.swipe-arrows span:nth-child(1) {
+  animation-delay: 0s;
+}
+.swipe-arrows span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.swipe-arrows span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes moveArrows {
+  0% { opacity: 0.3; transform: translateX(0); }
+  50% { opacity: 1; transform: translateX(4px); }
+  100% { opacity: 0.3; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+        @media (max-width: 600px) {
+            .book {
+                height: 75vh;
+            }
+
+            .page {
+                padding: 20px;
+            }
+
+            .page h2 {
+                font-size: 1.3em;
+            }
+
+            .page p {
+                font-size: 0.95em;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="book" id="book">
-    <div class="page" style="z-index: 4; color: white; background-image: url('https://imagine-public.x.ai/imagine-public/images/24865684-610a-4ba5-95dd-6879ca1a24a9.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
-      <h1>Undangan Wisuda XXVI</h1>
-      <p style="color: white;">Dengan hormat,<br>Yayasan Ratyni Gorda dan STIE Satya Dharma Singaraja<br>
-      mengundang Bapak/Ibu untuk hadir dalam acara <br><strong>Wisuda Sarjana & Ahli Madya</strong> STIE Satya Dharma.</p>
-    </div>
+    <div class="book" id="book">
+        <div class="page" style="z-index: 4; color: white; background-image: url('https://imagine-public.x.ai/imagine-public/images/24865684-610a-4ba5-95dd-6879ca1a24a9.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+            <h1>Undangan Wisuda XXVI</h1>
+            <p style="color: white;">Dengan hormat,<br>Yayasan Ratyni Gorda dan STIE Satya Dharma Singaraja<br>
+                mengundang Bapak/Ibu untuk hadir dalam acara <br><strong>Wisuda Sarjana & Ahli Madya</strong> STIE Satya Dharma.</p>
+                            <!-- Indikator SWIPE -->
+            <div class="swipe-indicator-simple">
+              <span class="swipe-text">SWIPE</span>
+              <span class="swipe-arrows">
+                <span>&#187;</span><span>&#187;</span><span>&#187;</span>
+              </span>
+            </div>
 
-    <div class="page" style="z-index: 3; background-image: url('https://imagine-public.x.ai/imagine-public/images/cd112255-f796-40f5-831c-dc75a28878d7.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
-      <section class="susunan">
-        <h2>SUSUNAN ACARA</h2>
-        <ol>
-          <li>Tari Kebesaran (Satya Gora Dharma)</li>
-          <li>Lagu Indonesia Raya.</li>
-          <li>Mengheningkan Cipta.</li>
-          <li>Pembukaan Rapat Senat Terbuka Sekolah Tinggi Ilmu Ekonomi Satya Dharma Singaraja, dilanjutkan dengan Laporan Tahunan Ketua STIE Satya Dharma.</li>
-          <li>Penyerahan Ijazah diawali dengan Pembacaan Surat Keputusan.</li>
-          <li>Janji Wisudawan.</li>
-          <li>Kuliah Umum dari Ketua Yayasan Tarumanagara Jakarta.</li>
-          <li>Sambutan-sambutan:
-            <ol type="a">
-              <li>Wakil Wisudawan.</li>
-              <li>Yayasan Ratyni Gorda.</li>
-              <li>Kepala LLDIKTI Wilayah VIII.</li>
-            </ol>
-          </li>
-          <li>Penutupan Rapat Terbuka Senat Sekolah Tinggi Ilmu Ekonomi Satya Dharma.</li>
-          <li>Hymne Guru.</li>
-          <li>Doa Restu.</li>
-          <li>Ramah Tamah.</li>
-          <li>Penutup.</li>
-        </ol>
-      </section>
-    </div>
-
-    <div class="page" style="z-index: 2; background: rgba(255,255,255,0.3); backdrop-filter: blur(8px); background-image: url('https://imagine-public.x.ai/imagine-public/images/0dc72bd7-99d7-41b4-a170-736c4ea1b84f.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
-  <div style="width:100%; height:100%; overflow-y:auto; text-align:left;">
-    <div style="background:rgba(255,255,255,0.7); border-radius:10px; padding:15px 20px; margin-bottom:15px; box-shadow:inset 0 0 8px rgba(0,0,0,0.1);">
-
-    
-    <h2 style="text-align:center; text-transform:uppercase; margin-bottom:10px; ">Undangan Wisuda XXVI</h2>
-    <h3 style="text-align:center; font-size:1.1em; margin-bottom:10px;">Sekolah Tinggi Ilmu Ekonomi Satya Dharma</h3>
-
-    <p style="margin-bottom:15px; text-align:justify;">
-      Dengan hormat,<br>
-      Merupakan kebahagiaan bagi kami bila Bapak/Ibu/Saudara berkenan menghadiri
-      <strong>Rapat Terbuka Senat Sekolah Tinggi Ilmu Ekonomi Satya Dharma</strong> dengan acara:
-    </p>
-
-    <div style="text-align:center; margin:15px 0;">
-      <div style="font-weight:700; font-size:1.2em;">WISUDA XXVI</div>
-      <div style="font-size:0.95em;">Sekolah Tinggi Ilmu Ekonomi Satya Dharma Singaraja</div>
-    </div>
-</div>
-    <div style="background:rgba(255,255,255,0.7); border-radius:10px; padding:15px 20px; margin-bottom:15px; box-shadow:inset 0 0 8px rgba(0,0,0,0.1);">
-      <dl style="margin:0;">
-        <dt style="font-weight:bold;">Hari / Tanggal :</dt>
-        <dd style="margin:0 0 8px 15px;">Jumat, 15 November 2024</dd>
-
-        <dt style="font-weight:bold;">Waktu :</dt>
-        <dd style="margin:0 0 8px 15px;">Pukul 10.00 WITA - selesai</dd>
-
-        <dt style="font-weight:bold;">Tempat :</dt>
-        <dd style="margin:0 0 8px 15px;">Hotel Banyualit Spa & Resort<br>Jl. Raya Lovina - Singaraja</dd>
-      </dl>
-    </div>
-
-    <div style="background:rgba(255,255,255,0.7); border-radius:10px; padding:15px 20px; margin-bottom:15px; box-shadow:inset 0 0 8px rgba(0,0,0,0.1);">
-    <p style="margin-bottom:15px; text-align:justify;">
-      Atas perhatian dan kehadirannya, kami haturkan terima kasih.
-    </p>
-
-      <div style="text-align:center; margin-bottom:20px;">
-        <div style="font-size:0.95em;">Singaraja, 1 November 2024<br>Sekolah Tinggi Ilmu Ekonomi Satya Dharma</div>
-        <div style="margin-top:8px; font-weight:bold;">Ketua</div>
-        <div style="margin-top:20px;">
-          <strong>Dr. Ni Nyoman Juli Nuryani, SE., MM.</strong><br>
-          <span style="font-size:0.9em;">NPP: 10.07.20.65</span>
+                
         </div>
-      </div>
+
+        <div class="page" style="z-index: 3; background-image: url('https://imagine-public.x.ai/imagine-public/images/cd112255-f796-40f5-831c-dc75a28878d7.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+            <section class="susunan">
+                <h2>SUSUNAN ACARA</h2>
+                <ol>
+                    <li>Tari Kebesaran (Satya Gora Dharma)</li>
+                    <li>Lagu Indonesia Raya.</li>
+                    <li>Mengheningkan Cipta.</li>
+                    <li>Pembukaan Rapat Senat Terbuka Sekolah Tinggi Ilmu Ekonomi Satya Dharma Singaraja, dilanjutkan dengan Laporan Tahunan Ketua STIE Satya Dharma.</li>
+                    <li>Penyerahan Ijazah diawali dengan Pembacaan Surat Keputusan.</li>
+                    <li>Janji Wisudawan.</li>
+                    <li>Kuliah Umum dari Ketua Yayasan Tarumanagara Jakarta.</li>
+                    <li>Sambutan-sambutan:
+                        <ol type="a">
+                            <li>Wakil Wisudawan.</li>
+                            <li>Yayasan Ratyni Gorda.</li>
+                            <li>Kepala LLDIKTI Wilayah VIII.</li>
+                        </ol>
+                    </li>
+                    <li>Penutupan Rapat Terbuka Senat Sekolah Tinggi Ilmu Ekonomi Satya Dharma.</li>
+                    <li>Hymne Guru.</li>
+                    <li>Doa Restu.</li>
+                    <li>Ramah Tamah.</li>
+                    <li>Penutup.</li>
+                </ol>
+            </section>
+                                       <!-- Indikator SWIPE -->
+            <div class="swipe-indicator-simple">
+              <span class="swipe-text">SWIPE</span>
+              <span class="swipe-arrows">
+                <span>&#187;</span><span>&#187;</span><span>&#187;</span>
+              </span>
+            </div>
+        </div>
+
+        <div class="page" style="z-index: 2; background: rgba(255,255,255,0.3); backdrop-filter: blur(8px); background-image: url('https://imagine-public.x.ai/imagine-public/images/0dc72bd7-99d7-41b4-a170-736c4ea1b84f.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+            <div style="width:100%; height:100%; overflow-y:auto; text-align:left;">
+                <div style="background:rgba(255,255,255,0.7); border-radius:10px; padding:15px 20px; margin-bottom:15px; box-shadow:inset 0 0 8px rgba(0,0,0,0.1);">
+
+
+                    <h2 style="text-align:center; text-transform:uppercase; margin-bottom:10px; ">Undangan Wisuda XXVI</h2>
+                    <h3 style="text-align:center; font-size:1.1em; margin-bottom:10px;">Sekolah Tinggi Ilmu Ekonomi Satya Dharma</h3>
+
+                    <p style="margin-bottom:15px; text-align:justify;">
+                        Dengan hormat,<br>
+                        Merupakan kebahagiaan bagi kami bila Bapak/Ibu/Saudara berkenan menghadiri
+                        <strong>Rapat Terbuka Senat Sekolah Tinggi Ilmu Ekonomi Satya Dharma</strong> dengan acara:
+                    </p>
+
+                    <div style="text-align:center; margin:15px 0;">
+                        <div style="font-weight:700; font-size:1.2em;">WISUDA XXVI</div>
+                        <div style="font-size:0.95em;">Sekolah Tinggi Ilmu Ekonomi Satya Dharma Singaraja</div>
+                    </div>
+                </div>
+                <div style="background:rgba(255,255,255,0.7); border-radius:10px; padding:15px 20px; margin-bottom:15px; box-shadow:inset 0 0 8px rgba(0,0,0,0.1);">
+                    <dl style="margin:0;">
+                        <dt style="font-weight:bold;">Hari / Tanggal :</dt>
+                        <dd style="margin:0 0 8px 15px;">Jumat, 15 November 2024</dd>
+
+                        <dt style="font-weight:bold;">Waktu :</dt>
+                        <dd style="margin:0 0 8px 15px;">Pukul 10.00 WITA - selesai</dd>
+
+                        <dt style="font-weight:bold;">Tempat :</dt>
+                        <dd style="margin:0 0 8px 15px;">Hotel Banyualit Spa & Resort<br>Jl. Raya Lovina - Singaraja</dd>
+                    </dl>
+                </div>
+
+                <div style="background:rgba(255,255,255,0.7); border-radius:10px; padding:15px 20px; margin-bottom:15px; box-shadow:inset 0 0 8px rgba(0,0,0,0.1);">
+                    <p style="margin-bottom:15px; text-align:justify;">
+                        Atas perhatian dan kehadirannya, kami haturkan terima kasih.
+                    </p>
+
+                    <div style="text-align:center; margin-bottom:20px;">
+                        <div style="font-size:0.95em;">Singaraja, 1 November 2024<br>Sekolah Tinggi Ilmu Ekonomi Satya Dharma</div>
+                        <div style="margin-top:8px; font-weight:bold;">Ketua</div>
+                        <div style="margin-top:20px;">
+                            <strong>Dr. Ni Nyoman Juli Nuryani, SE., MM.</strong><br>
+                            <span style="font-size:0.9em;">NPP: 10.07.20.65</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background:rgba(255,255,255,0.7); border-radius:10px; padding:15px 20px; box-shadow:inset 0 0 8px rgba(0,0,0,0.1);">
+                    <strong>Catatan :</strong>
+                    <ol style="margin-top:8px; padding-left:20px; line-height:1.6; font-size:0.95em;">
+                        <li>Mohon hadir 30 menit sebelum acara dimulai.</li>
+                        <li>Anggota Senat STIE dan BEM menunggu di ruang khusus.</li>
+                        <li>Pakaian: Sipil / PSH.</li>
+                        <li>Kartu undangan ini mohon dibawa saat menghadiri upacara wisuda.</li>
+                        <li>Bagi Wisudawan, undangan ini berlaku untuk 2 (dua) orang anggota keluarga.</li>
+                        <li>Konfirmasi kehadiran 2 (dua) hari sebelumnya.</li>
+                    </ol>
+                </div>
+
+            </div>
+                                       <!-- Indikator SWIPE -->
+            <div class="swipe-indicator-simple">
+              <span class="swipe-text">SWIPE</span>
+              <span class="swipe-arrows">
+                <span>&#187;</span><span>&#187;</span><span>&#187;</span>
+              </span>
+            </div>
+        </div>
+
+
+        <div class="page" style="z-index: 1;  background-image: url('https://imagine-public.x.ai/imagine-public/images/24865684-610a-4ba5-95dd-6879ca1a24a9.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+            <h2 style="color: white !important;">Penutup</h2>
+            <p style="color: white !important;">
+                Merupakan kehormatan bagi kami<br> apabila Bapak/Ibu berkenan hadir. <br><br>
+                <strong>STIE Satya Dharma Singaraja</strong><br>
+                <em>School of Economics with Spiritual Insight</em>
+            </p>
+        </div>
     </div>
 
-    <div style="background:rgba(255,255,255,0.7); border-radius:10px; padding:15px 20px; box-shadow:inset 0 0 8px rgba(0,0,0,0.1);">
-      <strong>Catatan :</strong>
-      <ol style="margin-top:8px; padding-left:20px; line-height:1.6; font-size:0.95em;">
-        <li>Mohon hadir 30 menit sebelum acara dimulai.</li>
-        <li>Anggota Senat STIE dan BEM menunggu di ruang khusus.</li>
-        <li>Pakaian: Sipil / PSH.</li>
-        <li>Kartu undangan ini mohon dibawa saat menghadiri upacara wisuda.</li>
-        <li>Bagi Wisudawan, undangan ini berlaku untuk 2 (dua) orang anggota keluarga.</li>
-        <li>Konfirmasi kehadiran 2 (dua) hari sebelumnya.</li>
-      </ol>
+    <div class="controls">
+        <button id="prev">&#8592;</button>
+        <button id="next">&#8594;</button>
     </div>
 
-  </div>
-</div>
+    <script>
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
 
+        function showPage(index) {
+            pages.forEach((page, i) => {
+                page.style.transform = i < index ? "rotateY(-180deg)" : "rotateY(0deg)";
+            });
+        }
 
-    <div class="page" style="z-index: 1;  background-image: url('https://imagine-public.x.ai/imagine-public/images/24865684-610a-4ba5-95dd-6879ca1a24a9.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
-      <h2 style="color: white !important;">Penutup</h2>
-      <p style="color: white !important;">
-        Merupakan kehormatan bagi kami<br> apabila Bapak/Ibu berkenan hadir. <br><br>
-        <strong>STIE Satya Dharma Singaraja</strong><br>
-        <em>School of Economics with Spiritual Insight</em>
-      </p>
-    </div>
-  </div>
+        document.getElementById('prev').addEventListener('click', () => {
+            current = (current - 1 + total) % total;
+            showPage(current);
+        });
 
-  <div class="controls">
-    <button id="prev">&#8592;</button>
-    <button id="next">&#8594;</button>
-  </div>
+        document.getElementById('next').addEventListener('click', () => {
+            current = (current + 1) % total;
+            showPage(current);
+        });
 
-  <script>
-    const pages = document.querySelectorAll('.page');
-    let current = 0;
-    const total = pages.length;
-
-    function showPage(index) {
-      pages.forEach((page, i) => {
-        page.style.transform = i < index ? "rotateY(-180deg)" : "rotateY(0deg)";
-      });
-    }
-
-    document.getElementById('prev').addEventListener('click', () => {
-      current = (current - 1 + total) % total;
-      showPage(current);
-    });
-
-    document.getElementById('next').addEventListener('click', () => {
-      current = (current + 1) % total;
-      showPage(current);
-    });
-
-    let startX = 0;
-    document.getElementById('book').addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-    });
-    document.getElementById('book').addEventListener('touchend', (e) => {
-      const endX = e.changedTouches[0].clientX;
-      if (startX - endX > 50) {
-        current = (current + 1) % total;
-        showPage(current);
-      } else if (endX - startX > 50) {
-        current = (current - 1 + total) % total;
-        showPage(current);
-      }
-    });
-  </script>
+        let startX = 0;
+        document.getElementById('book').addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        document.getElementById('book').addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) {
+                current = (current + 1) % total;
+                showPage(current);
+            } else if (endX - startX > 50) {
+                current = (current - 1 + total) % total;
+                showPage(current);
+            }
+        });
+    </script>
 </body>
-</html>
 
+</html>
