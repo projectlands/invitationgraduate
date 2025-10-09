@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="https://stie-satyadharma.ac.id/wp-content/uploads/2019/02/LOGO-e1549541735611.png" type="image/png">
 
-    
-<meta property="og:title" content="Undangan Wisuda XXVI">
+    <meta property="og:title" content="Undangan Wisuda XXVI">
     <meta property="og:description" content="Undangan Wisuda XXVI STIE Satya Dharma ">
     <meta property="og:image" content="https://invitation.stie-satyadharma.ac.id/thumbnail.png">
     <meta property="og:image:type" content="image/png">
@@ -142,72 +141,111 @@
         }
 
         /* ==== INDIKATOR SWIPE SEDERHANA ==== */
-.swipe-indicator-simple {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  color: #fff;
-  font-size: 1.1em;
-  letter-spacing: 1px;
-  margin-top: 20px;
-  animation: fadeIn 1.5s ease-in-out;
-}
+        .swipe-indicator-simple {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            color: #fff;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
 
-.swipe-arrows span {
-  display: inline-block;
-  animation: moveArrows 1.2s infinite;
-}
+        .swipe-arrows span {
+            display: inline-block;
+            animation: moveArrows 1.2s infinite;
+        }
 
-.swipe-arrows span:nth-child(1) {
-  animation-delay: 0s;
-}
-.swipe-arrows span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.swipe-arrows span:nth-child(3) {
-  animation-delay: 0.4s;
-}
+        .swipe-arrows span:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .swipe-arrows span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .swipe-arrows span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
 
-@keyframes moveArrows {
-  0% { opacity: 0.3; transform: translateX(0); }
-  50% { opacity: 1; transform: translateX(4px); }
-  100% { opacity: 0.3; transform: translateX(0); }
-}
+        @keyframes moveArrows {
+            0% { opacity: 0.3; transform: translateX(0); }
+            50% { opacity: 1; transform: translateX(4px); }
+            100% { opacity: 0.3; transform: translateX(0); }
+        }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
         /* Tombol Musik Floating */
-    #music-control {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 22px;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 20;
-      transition: all 0.3s ease;
-    }
+        #music-control {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 20;
+            transition: all 0.3s ease;
+        }
 
-    #music-control:hover {
-      background: rgba(0, 0, 0, 0.85);
-      transform: scale(1.1);
-    }
+        #music-control:hover {
+            background: rgba(0, 0, 0, 0.85);
+            transform: scale(1.1);
+        }
 
+        /* Overlay Styles */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            transition: opacity 0.5s ease;
+        }
+
+        .overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .overlay-button {
+            background: rgba(255, 255, 255, 0.9);
+            color: #2b2b2b;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-family: "Times New Roman", serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .overlay-button:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.05);
+        }
 
         @media (max-width: 600px) {
             .book {
@@ -225,25 +263,32 @@
             .page p {
                 font-size: 0.95em;
             }
+
+            .overlay-button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
 
 <body>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay">
+        <button class="overlay-button" id="start-button">We Are Ready to Graduate</button>
+    </div>
+
     <div class="book" id="book">
         <div class="page" style="z-index: 4; color: white; background-image: url('https://imagine-public.x.ai/imagine-public/images/24865684-610a-4ba5-95dd-6879ca1a24a9.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
             <h1>Undangan Wisuda XXVI</h1>
             <p style="color: white;">Dengan hormat,<br>Yayasan Ratyni Gorda dan STIE Satya Dharma Singaraja<br>
                 mengundang Bapak/Ibu untuk hadir dalam acara <br><strong>Wisuda Sarjana & Ahli Madya</strong> STIE Satya Dharma.</p>
-                            <!-- Indikator SWIPE -->
             <div class="swipe-indicator-simple">
-              <span class="swipe-text">SWIPE</span>
-              <span class="swipe-arrows">
-                <span>&#187;</span><span>&#187;</span><span>&#187;</span>
-              </span>
+                <span class="swipe-text">SWIPE</span>
+                <span class="swipe-arrows">
+                    <span>&#187;</span><span>&#187;</span><span>&#187;</span>
+                </span>
             </div>
-
-                
         </div>
 
         <div class="page" style="z-index: 3; background-image: url('https://imagine-public.x.ai/imagine-public/images/cd112255-f796-40f5-831c-dc75a28878d7.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
@@ -271,29 +316,24 @@
                     <li>Penutup.</li>
                 </ol>
             </section>
-                                       <!-- Indikator SWIPE -->
             <div class="swipe-indicator-simple">
-              <span class="swipe-text">SWIPE</span>
-              <span class="swipe-arrows">
-                <span>&#187;</span><span>&#187;</span><span>&#187;</span>
-              </span>
+                <span class="swipe-text">SWIPE</span>
+                <span class="swipe-arrows">
+                    <span>&#187;</span><span>&#187;</span><span>&#187;</span>
+                </span>
             </div>
         </div>
 
         <div class="page" style="z-index: 2; background: rgba(255,255,255,0.3); backdrop-filter: blur(8px); background-image: url('https://imagine-public.x.ai/imagine-public/images/0dc72bd7-99d7-41b4-a170-736c4ea1b84f.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
             <div style="width:100%; height:100%; overflow-y:auto; text-align:left;">
                 <div style="background:rgba(255,255,255,0.7); border-radius:10px; padding:15px 20px; margin-bottom:15px; box-shadow:inset 0 0 8px rgba(0,0,0,0.1);">
-
-
                     <h2 style="text-align:center; text-transform:uppercase; margin-bottom:10px; ">Undangan Wisuda XXVI</h2>
                     <h3 style="text-align:center; font-size:1.1em; margin-bottom:10px;">Sekolah Tinggi Ilmu Ekonomi Satya Dharma</h3>
-
                     <p style="margin-bottom:15px; text-align:justify;">
                         Dengan hormat,<br>
                         Merupakan kebahagiaan bagi kami bila Bapak/Ibu/Saudara berkenan menghadiri
                         <strong>Rapat Terbuka Senat Sekolah Tinggi Ilmu Ekonomi Satya Dharma</strong> dengan acara:
                     </p>
-
                     <div style="text-align:center; margin:15px 0;">
                         <div style="font-weight:700; font-size:1.2em;">WISUDA XXVI</div>
                         <div style="font-size:0.95em;">Sekolah Tinggi Ilmu Ekonomi Satya Dharma Singaraja</div>
@@ -303,20 +343,16 @@
                     <dl style="margin:0;">
                         <dt style="font-weight:bold;">Hari / Tanggal :</dt>
                         <dd style="margin:0 0 8px 15px;">Jumat, 15 November 2024</dd>
-
                         <dt style="font-weight:bold;">Waktu :</dt>
                         <dd style="margin:0 0 8px 15px;">Pukul 10.00 WITA - selesai</dd>
-
                         <dt style="font-weight:bold;">Tempat :</dt>
                         <dd style="margin:0 0 8px 15px;">Hotel Banyualit Spa & Resort<br>Jl. Raya Lovina - Singaraja</dd>
                     </dl>
                 </div>
-
                 <div style="background:rgba(255,255,255,0.7); border-radius:10px; padding:15px 20px; margin-bottom:15px; box-shadow:inset 0 0 8px rgba(0,0,0,0.1);">
                     <p style="margin-bottom:15px; text-align:justify;">
                         Atas perhatian dan kehadirannya, kami haturkan terima kasih.
                     </p>
-
                     <div style="text-align:center; margin-bottom:20px;">
                         <div style="font-size:0.95em;">Singaraja, 1 November 2024<br>Sekolah Tinggi Ilmu Ekonomi Satya Dharma</div>
                         <div style="margin-top:8px; font-weight:bold;">Ketua</div>
@@ -326,7 +362,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div style="background:rgba(255,255,255,0.7); border-radius:10px; padding:15px 20px; box-shadow:inset 0 0 8px rgba(0,0,0,0.1);">
                     <strong>Catatan :</strong>
                     <ol style="margin-top:8px; padding-left:20px; line-height:1.6; font-size:0.95em;">
@@ -338,19 +373,16 @@
                         <li>Konfirmasi kehadiran 2 (dua) hari sebelumnya.</li>
                     </ol>
                 </div>
-
             </div>
-                                       <!-- Indikator SWIPE -->
             <div class="swipe-indicator-simple">
-              <span class="swipe-text">SWIPE</span>
-              <span class="swipe-arrows">
-                <span>&#187;</span><span>&#187;</span><span>&#187;</span>
-              </span>
+                <span class="swipe-text">SWIPE</span>
+                <span class="swipe-arrows">
+                    <span>&#187;</span><span>&#187;</span><span>&#187;</span>
+                </span>
             </div>
         </div>
 
-
-        <div class="page" style="z-index: 1;  background-image: url('https://imagine-public.x.ai/imagine-public/images/24865684-610a-4ba5-95dd-6879ca1a24a9.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <div class="page" style="z-index: 1; background-image: url('https://imagine-public.x.ai/imagine-public/images/24865684-610a-4ba5-95dd-6879ca1a24a9.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
             <h2 style="color: white !important;">Penutup</h2>
             <p style="color: white !important;">
                 Merupakan kehormatan bagi kami<br> apabila Bapak/Ibu berkenan hadir. <br><br>
@@ -365,11 +397,10 @@
         <button id="next">&#8594;</button>
     </div>
 
-     <!-- Tombol Musik -->
-  <button id="music-control">⏸️</button>
-  <audio id="bg-music" loop autoplay>
-    <source src="https://invitation.stie-satyadharma.ac.id/Gelora%20Asmara%20-%20Derby%20Romero%20(Live%20Cover%20by%20Risda%20in%20Vienna).mp3" type="audio/mpeg">
-  </audio>
+    <button id="music-control">⏸️</button>
+    <audio id="bg-music" loop>
+        <source src="https://invitation.stie-satyadharma.ac.id/Gelora%20Asmara%20-%20Derby%20Romero%20(Live%20Cover%20by%20Risda%20in%20Vienna).mp3" type="audio/mpeg">
+    </audio>
 
     <script>
         const pages = document.querySelectorAll('.page');
@@ -407,49 +438,39 @@
             }
         });
 
-        // Kontrol Musik
-    const music = document.getElementById('bg-music');
-    const btn = document.getElementById('music-control');
+        // Kontrol Musik dan Overlay
+        const music = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-control');
+        const overlay = document.getElementById('overlay');
+        const startButton = document.getElementById('start-button');
 
-    btn.addEventListener('click', () => {
-      if (music.paused) {
-        music.play();
-        btn.textContent = '⏸️';
-      } else {
+        // Initialize music as paused and overlay as visible
         music.pause();
-        btn.textContent = '▶️';
-      }
-    });
+        musicBtn.textContent = '▶️';
+        overlay.classList.remove('hidden');
 
-    window.addEventListener("load", function() {
-  const audio = document.getElementById("bg-music");
-  let audioStarted = false;
-
-  // Fungsi untuk memutar audio setelah disentuh pertama kali
-  function startAudio() {
-    if (!audioStarted) {
-      audioStarted = true;
-      setTimeout(() => {
-        audio.play().then(() => {
-          console.log("Musik diputar setelah sentuhan pertama.");
-        }).catch(err => {
-          console.log("Gagal memutar musik:", err);
+        // Start music and hide overlay when button is clicked
+        startButton.addEventListener('click', () => {
+            music.play().then(() => {
+                console.log("Musik diputar setelah tombol diklik.");
+                overlay.classList.add('hidden');
+                musicBtn.textContent = '⏸️';
+            }).catch(err => {
+                console.log("Gagal memutar musik:", err);
+            });
         });
-      }, 2000); // jeda 2 detik setelah sentuhan
-    }
-  }
 
-  // Jalankan saat halaman pertama kali disentuh atau diklik
-  document.addEventListener("touchstart", startAudio, { once: true });
-  document.addEventListener("mousedown", startAudio, { once: true });
-});
+        // Toggle music with music control button
+        musicBtn.addEventListener('click', () => {
+            if (music.paused) {
+                music.play();
+                musicBtn.textContent = '⏸️';
+            } else {
+                music.pause();
+                musicBtn.textContent = '▶️';
+            }
+        });
     </script>
 </body>
 
 </html>
-
-
-
-
-
-
