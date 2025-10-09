@@ -421,54 +421,33 @@
       }
     });
 
-// Status apakah audio sudah dimulai
-let audioStarted = false;
+    window.addEventListener("load", function() {
+  const audio = document.getElementById("bg-music");
+  let audioStarted = false;
 
-// Fungsi untuk memutar musik
-function playMusic() {
-  music.play().then(() => {
-    btn.textContent = '⏸️';
-    console.log("Musik diputar.");
-  }).catch(err => {
-    console.log("Gagal memutar musik:", err);
-  });
-}
-
-// Fungsi untuk jeda musik
-function pauseMusic() {
-  music.pause();
-  btn.textContent = '▶️';
-  console.log("Musik dijeda.");
-}
-
-// Fungsi untuk memulai musik setelah interaksi pertama
-function startAudio() {
-  if (!audioStarted) {
-    audioStarted = true;
-    setTimeout(() => {
-      playMusic();
-    }, 1000); // jeda 1 detik agar terasa natural
+  // Fungsi untuk memutar audio setelah disentuh pertama kali
+  function startAudio() {
+    if (!audioStarted) {
+      audioStarted = true;
+      setTimeout(() => {
+        audio.play().then(() => {
+          console.log("Musik diputar setelah sentuhan pertama.");
+        }).catch(err => {
+          console.log("Gagal memutar musik:", err);
+        });
+      }, 2000); // jeda 2 detik setelah sentuhan
+    }
   }
-}
 
-// Kontrol manual dari tombol
-btn.addEventListener('click', () => {
-  if (music.paused) {
-    playMusic();
-  } else {
-    pauseMusic();
-  }
-});
-
-// Jalankan saat halaman pertama kali disentuh atau diklik
-window.addEventListener('load', () => {
-  document.addEventListener('touchstart', startAudio, { once: true });
-  document.addEventListener('mousedown', startAudio, { once: true });
+  // Jalankan saat halaman pertama kali disentuh atau diklik
+  document.addEventListener("touchstart", startAudio, { once: true });
+  document.addEventListener("mousedown", startAudio, { once: true });
 });
     </script>
 </body>
 
 </html>
+
 
 
 
